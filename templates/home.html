@@ -1,0 +1,42 @@
+{% extends "nav-parent.html" %}
+{% block title %} Transit Master {% endblock %}
+{% block head %} 
+    {{ super() }}
+{% endblock %}
+{% block pagesummary %}
+    {{ super() }}
+
+{% endblock %}
+
+{% block content %}
+<div class="row text-center">
+    TRANSIT MASTER!
+</div>
+<div class="row">
+</div>
+<div class="row h-100 align-self-center">
+    <div class="col-6">
+       <div class="card card-block text-center">
+            <a href='/learn/'>Learn</a>
+       </div>
+    </div>
+    <div class="col-6">
+       <div class="card card-block text-center">
+            <a href='#' id='quiz-link'>Quiz</a>
+       </div>
+       <div id="quiz-options" style='display:none;'>
+           <a id='easy-link' href='/quiz/'> Easy </a>
+           <a id='hard-link' href='/quiz/'> Hard </a>
+       </div>
+    </div>
+ </div>
+{% endblock %}
+{% block script %}
+<script>
+    const trains = JSON.parse('{{ trains|tojson|safe }}')
+    const loadCommand = JSON.parse(0)
+    const indexLoad = JSON.parse('{{ indexLoad|tojson }}')
+    const quiz = JSON.parse('{{ quiz|tojson }}')
+    const quizIndex = JSON.parse('{{ quizIndex|tojson }}')
+</script>
+{% endblock %}

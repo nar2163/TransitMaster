@@ -1,0 +1,25 @@
+{% extends "nav-parent.html" %}
+{% block title %} Transit Master {% endblock %}
+{% block head %} 
+    {{ super() }}
+{% endblock %}
+{% block pagesummary %}
+    {{ super() }}
+
+{% endblock %}
+
+{% block content %}
+
+<div id="train-main">
+
+</div>
+{% endblock %}
+{% block script %}
+<script>
+    const trains = JSON.parse('{{ trains|tojson|safe }}')
+    const loadCommand = JSON.parse(1)
+    const indexLoad = JSON.parse('{{ indexLoad|tojson }}')
+    const quiz = JSON.parse('{{ quiz|tojson }}')
+    const quizIndex = JSON.parse('{{ quizIndex|tojson }}')
+</script>
+{% endblock %}

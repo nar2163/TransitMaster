@@ -1,0 +1,41 @@
+{% extends "nav-parent.html" %}
+{% block title %} Transit Master {% endblock %}
+{% block head %} 
+    {{ super() }}
+{% endblock %}
+{% block pagesummary %}
+    {{ super() }}
+
+{% endblock %}
+
+{% block content %}
+<div id="big-box">
+    <div class="row">
+        <div class="col-lg-6" id="question">
+
+        </div>    
+    </div>
+    <div class="row">
+        <div class="col-lg-6 border-box droppable" id="answer-bucket">
+
+        </div>
+        <div class="col-lg-6 border-box droppable" id="train-bucket">
+
+        </div>
+        
+    </div>
+    <div id="score">
+        
+    </div>
+    <button class="btn btn-primary" type="submit" id="submit-answer">Submit</button>
+</div>
+{% endblock %}
+{% block script %}
+<script>
+    const trains = JSON.parse('{{ trains|tojson|safe }}')
+    const loadCommand = JSON.parse(3)
+    const indexLoad = JSON.parse('{{ indexLoad|tojson }}')
+    const quiz = JSON.parse('{{ quiz|tojson }}')
+    const quizIndex = JSON.parse('{{ quizIndex|tojson }}')
+</script>
+{% endblock %}
