@@ -15,48 +15,46 @@
 </head>
 <body>
     <div class="container-fluid document-general" id="whole_page">
-        <div class="row" id="main-top">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class='col-lg-3 text-center'>
-                    <a class="navbar-brand nav-title">Menu</a>
-                    <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>-->
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color:aliceblue">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="col-lg-6">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link main-font" href="/"><span class="main-font">Home</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/learn"><span class="main-font">Learn</span></a>
+                            </li>
+                            <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="main-font">Quiz</span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#"><span>Easy</span></a>
+                                <a class="dropdown-item main-font" href="#"><span>Hard</span></a>
+                            </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-2">
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    </div>
+                    <div class="col-lg-1">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                    </div>
                 </div>
-                <div class='col-lg-8'>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                        <a class="nav-link waves-effect waves-light" href="/">Home</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link waves-effect waves-light" href="/learn">Learn</a>
-                        </li>
-                    </ul>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Quiz
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" href="#">Easy</a>
-                          <a class="dropdown-item" href="#">Hard</a>
-                        </div>
-                      </li>
-                </div>
-            </nav>
-
+          </nav>
         </div>
     
         {% block content %}
-        <div id="train-main" class="row center-search">
-                
-        </div>
         {% endblock %}
-    </div>
-    
-    
 
 </body>
+
+{% block bootstrap %}
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -68,7 +66,7 @@
         integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
         crossorigin="anonymous"></script>
 <script src="{{ url_for('static', filename='train-logic.js') }}"></script>
-
+{% endblock %}
 
 {% block script %}
 <script>

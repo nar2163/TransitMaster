@@ -9,25 +9,45 @@
 {% endblock %}
 
 {% block content %}
-<div id="big-box">
+<div id="container-fluid">
+    <div class="row top-space"></div>
     <div class="row">
-        <div class="col-lg-6" id="question">
-
-        </div>    
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6 question-text" id="question"></div>
+        <div class="col-lg-3"></div>    
     </div>
     <div class="row">
-        <div class="col-lg-6 border-box droppable" id="answer-bucket">
-
+        <div class="col-lg-6 d-flex justify-content-center">
+            <div class="quizDot droppable" id="answer-bucket">
+                <div class="row quizSpace"></div>
+            </div>
         </div>
-        <div class="col-lg-6 border-box droppable" id="train-bucket">
-
+        <div class="col-lg-6 d-flex justify-content-center">
+            <div class="quizDot droppable">
+                    <div class="row">
+                        <div class="quizSpace"></div>
+                        <div class="quizSpace"></div>
+                        <div class="col-lg-3"></div>
+                        <div class="droppable col-lg-2" id="train-bucket"></div>
+                        <div class="droppable col-lg-2" id="train-bucket1"></div>
+                        <div class="droppable col-lg-2" id="train-bucket2"></div>
+                        <div class="col-lg-3"></div>
+                    </div>
+            </div>
         </div>
-        
     </div>
-    <div id="score">
-        
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4 justify-content-center" id="score"></div>     
+        <div class="col-lg-4"></div>    
     </div>
-    <button class="btn btn-primary" type="submit" id="submit-answer">Submit</button>
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4 text-center">
+            <button class="btn btn-primary" type="submit" id="submit-answer">Submit</button>
+        </div>
+        <div class="col-lg-4"></div>    
+    </div>
 </div>
 {% endblock %}
 {% block script %}
@@ -37,5 +57,6 @@
     const indexLoad = JSON.parse('{{ indexLoad|tojson }}')
     const quiz = JSON.parse('{{ quiz|tojson }}')
     const quizIndex = JSON.parse('{{ quizIndex|tojson }}')
+    const wrongAnswer = JSON.parse(' {{ wrongAnswer|tojson }}')
 </script>
 {% endblock %}

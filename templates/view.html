@@ -9,8 +9,34 @@
 {% endblock %}
 
 {% block content %}
-
 <div id="view-main">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="row">
+                <div class="col-lg-12" id="subway-logo">
+
+                </div>
+            </div>
+            <div class="row">    
+                <div class="col-lg-12" id="subway-description">    
+                    About:
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12" id="subway-laststops">
+                    
+                </div>    
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <div class="border-box" id="popup">
+                    
+            </div>
+        </div>
+        <div class="col-lg-4" id="subway-map">
+           
+        </div>
+    </div>
     
 </div>
 {% endblock %}
@@ -21,5 +47,6 @@
     const indexLoad = JSON.parse('{{ indexLoad|tojson }}')
     const quiz = JSON.parse('{{ quiz|tojson }}')
     const quizIndex = JSON.parse('{{ quizIndex|tojson }}')
+    const wrongAnswer = JSON.parse(' {{ wrongAnswer|tojson }}')
 </script>
 {% endblock %}

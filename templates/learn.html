@@ -10,9 +10,38 @@
 
 {% block content %}
 
-<div id="train-main">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+            <p class="title-text">Pick a train!</p>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+    <div class="top-space"></div>
+    <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-3">
+            <div class="row" id="train-main">
 
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="row"  id="train-main2">
+
+            </div>
+        </div>
+        <div class="col-lg-1">
+            <div class="row"  id="train-main3">
+
+            </div>
+        </div>
+        <div class="col-lg-1"></div>
+    </div>
 </div>
+{% endblock %}
+{% block boostrap %}
+    {{ super() }}
 {% endblock %}
 {% block script %}
 <script>
@@ -21,5 +50,6 @@
     const indexLoad = JSON.parse('{{ indexLoad|tojson }}')
     const quiz = JSON.parse('{{ quiz|tojson }}')
     const quizIndex = JSON.parse('{{ quizIndex|tojson }}')
+    const wrongAnswer = JSON.parse(' {{ wrongAnswer|tojson }}')
 </script>
 {% endblock %}

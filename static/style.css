@@ -1,8 +1,106 @@
 .border-box{
     border: 1px solid darkblue;
-    margin-top: 100px;
-    margin-left: 100px;
-    margin-bottom: 100px;
-    height: 200px;
-    width: 200px;
+}
+
+.main-font{
+    color: darkblue;
+}
+
+.dot {
+    height: 400px;
+    width: 400px;
+    background-color: rgb(216, 236, 253);
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.quizDot {
+    height: 600px;
+    width: 600px;
+    border: solid rgb(216, 236, 253);
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.mini-dot {
+    height: 50px;
+    width: 50px;
+    background-color: rgb(216, 236, 253);
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.title-text{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 75px;
+    color: rgb(27, 148, 223);
+    text-align: center; 
+    padding-top: 75px;
+}
+
+.question-text{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    color: rgb(27, 148, 223);
+    text-align: center;
+}
+
+.dot-text{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 35px;
+    color: rgb(10, 125, 197);
+    margin: auto;
+}
+
+.dot-mini-text{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    color: rgb(6, 72, 112);
+    margin: auto;
+}
+
+.circle-div{
+    height: 400px;
+    width: 400px;
+    margin-top: 40%;
+}
+
+.card{
+    border: none;
+}
+
+.top-space{
+    height: 50px;
+}
+
+.test{
+    position: absolute;
+    left: 1060px;
+    top: 960px;
+}
+
+.quizBucket {
+    display: flex;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid;
+    flex-wrap: wrap;
+    float: left;
+}
+
+.quizSpace {
+    height: 30px;
+}
+
+.centerStuff {
+    text-align: center;
 }

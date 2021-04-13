@@ -9,27 +9,46 @@
 {% endblock %}
 
 {% block content %}
-<div class="row text-center">
-    TRANSIT MASTER!
-</div>
-<div class="row">
-</div>
-<div class="row h-100 align-self-center">
-    <div class="col-6">
-       <div class="card card-block text-center">
-            <a href='/learn/'>Learn</a>
-       </div>
+
+<div class="container-fluid">
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+            <p class="title-text">Transit Master!</p>
+        </div>
+        <div class="col-lg-4"></div>
     </div>
-    <div class="col-6">
-       <div class="card card-block text-center">
-            <a href='#' id='quiz-link'>Quiz</a>
-       </div>
-       <div id="quiz-options" style='display:none;'>
-           <a id='easy-link' href='/quiz/'> Easy </a>
-           <a id='hard-link' href='/quiz/'> Hard </a>
-       </div>
+    <div class="row">
+        <div class="col-lg-6 d-flex justify-content-center">
+            <a href="/learn">
+                <span class="dot">
+                    <div class="circle-div">
+                        <p class="dot-text">Learn</p>
+                    </div>
+                </span>
+            </a>
+        </div>
+        <div class="col-lg-6 d-flex justify-content-center">
+            <a href="#" id="quiz-link">    
+                <span class="dot">
+                    <div class="circle-div" id="quiz-main">
+                        <p class="dot-text">Quiz</p>
+                    </div>
+                    <div id="quiz-options" style='display:none;'>
+                        <a id='easy-link' href='/quiz/'><p class="dot-mini-text">Easy</p></a>
+                        <a id='hard-link' href='/quiz/'><p class="dot-mini-text">Hard</p></a>
+                    </div>
+                </span>
+            </a>
+        </div>
+
     </div>
- </div>
+</div>
+{% endblock %}
+{% block boostrap %}
+    {{ super() }}
 {% endblock %}
 {% block script %}
 <script>
@@ -38,5 +57,6 @@
     const indexLoad = JSON.parse('{{ indexLoad|tojson }}')
     const quiz = JSON.parse('{{ quiz|tojson }}')
     const quizIndex = JSON.parse('{{ quizIndex|tojson }}')
+    const wrongAnswer = JSON.parse(' {{ wrongAnswer|tojson }}')
 </script>
 {% endblock %}

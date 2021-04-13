@@ -9,12 +9,20 @@
 {% endblock %}
 
 {% block content %}
-<div class="row text-center">
-    TRANSIT MASTER!
-</div>
+<!--<div class="row">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4 title-text">Transit Master!</div>     
+    <div class="col-lg-4"></div>    
+</div>--->
+<div class="row quizSpace"></div>
 <div class="row">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4 question-text" id="final-score"></div>
+    <div class="col-lg-4"></div>
 </div>
-<div id="final-score">
+<div class="row" id="wrong-answers">
+    
+</div>
 
 </div>
 {% endblock %}
@@ -26,5 +34,6 @@
     const quiz = JSON.parse('{{ quiz|tojson }}')
     const quizIndex = JSON.parse('{{ quizIndex|tojson }}')
     const quizScore = JSON.parse(' {{ quizScore|tojson }}')
+    const wrongAnswer = JSON.parse(' {{ wrongAnswer|tojson }}')
 </script>
 {% endblock %}
